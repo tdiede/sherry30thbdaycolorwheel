@@ -14,6 +14,7 @@ $(document).ready(function() {
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
     ctx = canvas.getContext('2d');
+    addImageToCanvas();
 });
 
 
@@ -24,7 +25,7 @@ function addImageToCanvas() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     placeDot(img.width/2, img.height/2);
 }
-setTimeout(addImageToCanvas, 1000);
+// setTimeout(addImageToCanvas, 1000);
 setTimeout(updateOpacity, 1000);
 
 function placeDot(x,y) {
