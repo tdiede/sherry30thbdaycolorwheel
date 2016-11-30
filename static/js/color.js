@@ -14,7 +14,7 @@ console.log(img.height+'x'+img.width);
 
 
 var width = $(window).width();
-$(document).ready( setCanvas() );
+$(document).ready( setCanvas(width) );
 $(window).resize(function() {
     if ($(this).width() != width) {
         width = $(this).width();
