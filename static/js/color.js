@@ -1,16 +1,19 @@
 "use strict";
 
+
+// set canvas and ctx
+var canvas = document.getElementById('canvas-picker');
+var ctx = canvas.getContext('2d');
+// create an image object
+var img = new Image();
+img.onload = addImageToCanvas;
+// set img source
+img.src = 'static/img/poraschaudhary-photo-21.jpg';
+
+
 $(document).ready(function() {
 
-    // set canvas and ctx
-    var canvas = document.getElementById('canvas-picker');
-    var ctx = canvas.getContext('2d');
-    // create an image object
-    var img = new Image();
-    img.onload = addImageToCanvas;
-    // set img source
-    img.src = 'static/img/poraschaudhary-photo-21.jpg';
-
+    addImageToCanvas();
     updateOpacity();
 
 });
