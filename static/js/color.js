@@ -1,16 +1,20 @@
 "use strict";
 
 
+var canvas;
+var ctx;
+var img;
+
+
 $(document).ready(function() {
 
-    var canvas = document.getElementById('canvas-picker');
+    canvas = document.getElementById('canvas-picker');
     canvas.width = canvas.height = 0;
 
     // create an image object and get it’s source
-    var img = new Image();
+    img = new Image();
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
-    var ctx
     ctx = canvas.getContext('2d');
 });
 
