@@ -11,17 +11,15 @@ var width;
 $(document).on('load', function() {
 
     canvas = document.getElementById('canvas-picker');
-    var width = $(document).width();
-    canvas.width = width;
-    console.log(width);
-
     ctx = canvas.getContext('2d');
 
 });
 
 $(document).ready(function() {
 
-
+    width = $(document).width();
+    canvas.width = width;
+    console.log(width);
 
     // set img source
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
