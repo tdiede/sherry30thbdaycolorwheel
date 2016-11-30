@@ -36,7 +36,7 @@ $(window).bind("load", function() {
 // copy the image to the canvas
 function addImageToCanvas() {
     canvas.width = width;
-    // canvas.height = img.height;
+    canvas.height = img.height;
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     placeDot(img.width/2, img.height/2);
 }
