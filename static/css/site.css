@@ -49,8 +49,6 @@ body {
 
 #canvas-picker {
     background-color: black;
-    position: absolute;
-    width: 0;
     margin: 0 auto;
     z-index: 100;
     cursor: url('../img/eyedropper_flip.png') 25 25, auto;

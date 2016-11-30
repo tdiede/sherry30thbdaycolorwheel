@@ -5,20 +5,20 @@ var canvas;
 var ctx;
 // create an image object
 var img = new Image();
+// set img source
+img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 var width;
 
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
 
-    // set img source
-    img.src = 'static/img/poraschaudhary-photo-21.jpg';
-// });
+});
 
 
 $(window).bind("load", function() {
