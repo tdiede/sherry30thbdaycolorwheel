@@ -1,6 +1,17 @@
 "use strict";
 
 
+var width = $(window).width();
+$(window).resize(function(){
+    if ($(this).width() != width) {
+        width = $(this).width();
+        console.log(width);
+        resizeCanvas(width);
+    }
+});
+
+
+
 // set canvas and ctx
 var canvas = document.getElementById('canvas-picker');
 var ctx = canvas.getContext('2d');
@@ -14,23 +25,14 @@ img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
 console.log(img.height+'x'+img.width);
 
 
-var width = $(window).width();
-$(window).resize(function(){
-    if ($(this).width() != width) {
-        width = $(this).width();
-        console.log(width);
-        resizeCanvas(width);
-    }
-});
-
 
 // set initial canvas dimensions
 function setCanvas(width) {
+    width = $(window).width();
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
     console.log(width+'x'+canvas.height);
 }
-
 
 // resize canvas, if change detected on window.width
 function resizeCanvas(width) {
