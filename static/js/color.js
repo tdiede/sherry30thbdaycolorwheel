@@ -9,12 +9,14 @@ var img = new Image();
 img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 
+
+
+$(document).ready(function() {
+
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
-
-$(document).ready(function() {
 
     var width = $(document).width();
 
