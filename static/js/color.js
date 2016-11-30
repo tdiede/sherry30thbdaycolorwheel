@@ -11,31 +11,29 @@ img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 
 $(document).ready(function() {
-
-    var width = $(document).width();
-
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
-    canvas.width = canvas.height = width;
+    canvas.width = canvas.height = 0;
 
 });
 
 
 $(window).bind("load", function() {
 
+    var width = $(document).width();
 
     // add img to canvas and update opacity slider (default)
-    addImageToCanvas();
+    addImageToCanvas(width);
     updateOpacity();
 });
 
 
 
 // copy the image to the canvas
-function addImageToCanvas() {
-    canvas.width = img.width;
-    canvas.height = img.height;
+function addImageToCanvas(width) {
+    canvas.width = width;
+    canvas.height = (img.height/img.width) * width;
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     placeDot(img.width/2, img.height/2);
 }
