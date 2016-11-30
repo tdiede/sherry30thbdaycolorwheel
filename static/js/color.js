@@ -15,7 +15,8 @@ img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
 
 var width = $(window).width();
 canvas.width = width;
-console.log(width);
+canvas.height = (img.height/img.width) * width;
+console.log(width+'x'+canvas.height);
 $(window).resize(function(){
     if ($(this).width() != width) {
         width = $(this).width();
