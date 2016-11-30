@@ -13,7 +13,10 @@ var width = $(document).width();
 
 $(document).ready(function() {
 
-
+    // set canvas and ctx
+    canvas = document.getElementById('canvas-picker');
+    ctx = canvas.getContext('2d');
+    canvas.width = canvas.height = 0;
 
 });
 
@@ -21,10 +24,7 @@ $(document).ready(function() {
 $(window).bind("load", function() {
 
 
-    // set canvas and ctx
-    canvas = document.getElementById('canvas-picker');
-    ctx = canvas.getContext('2d');
-    canvas.width = canvas.height = 0;
+
 
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
