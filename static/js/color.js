@@ -5,7 +5,6 @@ var canvas;
 var ctx;
 var img;
 
-
 $(document).ready(function() {
 
     canvas = document.getElementById('canvas-picker');
@@ -26,8 +25,8 @@ function addImageToCanvas() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     placeDot(img.width/2, img.height/2);
 }
-setTimeout(addImageToCanvas, 100);
-setTimeout(updateOpacity, 100);
+setTimeout(addImageToCanvas, 1000);
+setTimeout(updateOpacity, 1000);
 
 function placeDot(x,y) {
     // console.log(x,y);
