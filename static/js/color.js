@@ -6,12 +6,22 @@ var ctx;
 // create an image object
 var img = new Image();
 
-$(document).ready(function() {
+var width;
+
+$(document).on('load', function() {
 
     canvas = document.getElementById('canvas-picker');
-    canvas.width = $(document).width();
+    var width = $(document).width();
+    canvas.width = width;
+    console.log(width);
 
     ctx = canvas.getContext('2d');
+
+});
+
+$(document).ready(function() {
+
+
 
     // set img source
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
