@@ -10,8 +10,8 @@ img.onload = addImageToCanvas;
 // set img source
 // img.src = 'static/img/poraschaudhary-photo-21.jpg';
 img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
+console.log(img.height+'x'+img.width);
 
-console.log(img.height, img.width);
 
 var width = $(window).width();
 canvas.width = width;
@@ -26,8 +26,7 @@ $(window).resize(function(){
 });
 
 
-// resize canvas, change detected
-// based on window.width
+// resize canvas, if change detected on window.width
 function resizeCanvas(width) {
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
@@ -89,7 +88,7 @@ moveDot(x,y);
 function changeColor(color) {
     $('#sample-box').css('background-color', 'rgb('+color+')');
     $('h1').css('color', 'rgb('+color+')');
-    $('h1').css('text-shadow', 'white');
+    $('h1').css('text-shadow', '3px 3px 1px white');
 }
 
 // var current;
