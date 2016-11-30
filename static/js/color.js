@@ -9,7 +9,7 @@ var img = new Image();
 img.onload = addImageToCanvas;
 // set img source
 // img.src = 'static/img/poraschaudhary-photo-21.jpg';
-img.src = 'Dhuleti-Pictures-Photos-color-festival-india.jpg';
+img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
 
 
 
