@@ -18,12 +18,10 @@ $(document).ready(function() {
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
 
-// });
+});
 
 
-// $(window).bind("load", function() {
-
-    resizeCanvas();
+$(window).bind("load", function() {
 
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();

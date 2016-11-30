@@ -55,6 +55,11 @@ body {
 }
 
 #happy-birthday {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 {
     font-family: Merriweather;
     font-size: 48px;
     font-weight: black;
