@@ -57,8 +57,9 @@ body {
 #happy-birthday {
     position: fixed;
     top: 30px;
+    width: 100%;
     padding: 20px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 h1 {
@@ -66,6 +67,7 @@ h1 {
     font-size: 48px;
     font-weight: black;
     color: white;
+    text-shadow: 1px 1px white;
     text-align: center;
 }
 
