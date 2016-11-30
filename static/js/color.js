@@ -28,7 +28,7 @@ $(window).resize(function(){
 function setCanvas(width) {
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
-    console.log(width+'x'+canvas.height);    
+    console.log(width+'x'+canvas.height);
 }
 
 
