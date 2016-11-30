@@ -89,6 +89,7 @@ moveDot(x,y);
 function changeColor(color) {
     $('#sample-box').css('background-color', 'rgb('+color+')');
     $('h1').css('color', 'rgb('+color+')');
+    $('h1').css('text-shadow', 'white');
 }
 
 // var current;
