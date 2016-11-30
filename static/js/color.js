@@ -11,13 +11,14 @@ img.onload = addImageToCanvas;
 img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 
-$(document).ready(function() {
 
-    addImageToCanvas();
-    updateOpacity();
-
+var width = $(window).width();
+$(window).resize(function(){
+    if ($(this).width() != width) {
+        width = $(this).width();
+        console.log(width);
+    }
 });
-
 
 
 function resizeCanvas() {
