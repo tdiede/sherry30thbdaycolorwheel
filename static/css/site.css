@@ -3,46 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 
-body {
-  /* Location of the image */
-  /*background-image: url('../img/testing.png'); */
-  /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;  
-  /* Background image doesn't tile */
-  background-repeat: no-repeat;
-    /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-  background-attachment: fixed;  
-  /* This is what makes the background image rescale based
-     on the container's size */
-  background-size: cover;  
-  /* Set a background color that will be displayed
-     while the background image is loading */
-  background-color: #eeeeee;
-}
-
-.img-adu {
-    width: 100%;
-    height: auto;
-}
-
-.container {
-    position: absolute;
-    top: 200px;
-    left: 100px;
-}
-
-/* Style our navbar. */
-.navbar {
-    background-color: transparent;
-    border-bottom: none;
-}
-
-
-.fa, .glyphicon {
-    font-size: 50px;
-    color: #333333;
-}
 
 
 
@@ -58,7 +18,6 @@ body {
     top: 30px;
     width: 100%;
     padding: 20px;
-    /*margin: 0 auto;*/
 }
 
 h1 {
@@ -68,6 +27,12 @@ h1 {
     color: white;
     text-shadow: 3px 3px 1px white;
     text-align: center;
+}
+
+#tool-kit {
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 
