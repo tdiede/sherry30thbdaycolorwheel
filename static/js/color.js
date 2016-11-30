@@ -17,20 +17,22 @@ $(window).resize(function(){
     if ($(this).width() != width) {
         width = $(this).width();
         console.log(width);
-        resizeCanvas();
+        resizeCanvas(width);
     }
 });
 
 
-function resizeCanvas() {
+// resize canvas, change detected
+// based on window.width
+function resizeCanvas(width) {
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
+    addImageToCanvas();
 }
 
 
 // copy the image to the canvas
 function addImageToCanvas() {
-    resizeCanvas();
     img.width = canvas.width;
     img.height = canvas.height;
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
