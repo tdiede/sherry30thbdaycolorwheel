@@ -11,13 +11,17 @@ var width;
 
 $(document).ready(function() {
 
-    console.log('loaded');
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
+    canvas.width = canvas.height = 0;
+});
 
-    // width = $(document).width();
+
+$(window).bind("load", function() {
+
+    width = $(document).width();
     // canvas.width = width;
-    // console.log(width);
+    console.log(width);
 
     // set img source
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
@@ -25,6 +29,7 @@ $(document).ready(function() {
     addImageToCanvas();
     updateOpacity();
 });
+
 
 
 // copy the image to the canvas
