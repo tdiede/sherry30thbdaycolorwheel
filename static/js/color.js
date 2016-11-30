@@ -2,7 +2,7 @@
 
 
 var canvas = document.getElementById('canvas-picker');
-canvas.width = canvas.height = 0;
+// canvas.width = canvas.height = 0;
 
 // create an image object and get it’s source
 var img = new Image();
