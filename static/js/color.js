@@ -18,12 +18,12 @@ $(document).ready(function() {
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
 
-    var width = $(document).width();
-
 });
 
 
 $(window).bind("load", function() {
+
+    var width = $(document).width();
 
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
