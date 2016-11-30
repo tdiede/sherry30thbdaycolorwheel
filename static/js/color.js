@@ -3,6 +3,7 @@
 
 var canvas;
 var ctx;
+// create an image object
 var img = new Image();
 
 $(document).ready(function() {
@@ -10,11 +11,13 @@ $(document).ready(function() {
     canvas = document.getElementById('canvas-picker');
     canvas.width = canvas.height = 0;
 
-    // create an image object and get it’s source
-    img.src = 'static/img/poraschaudhary-photo-21.jpg';
-
     ctx = canvas.getContext('2d');
+
+    // set img source
+    img.src = 'static/img/poraschaudhary-photo-21.jpg';
+    // add img to canvas and update opacity slider (default)
     addImageToCanvas();
+    updateOpacity();
 });
 
 
@@ -25,8 +28,7 @@ function addImageToCanvas() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     placeDot(img.width/2, img.height/2);
 }
-// setTimeout(addImageToCanvas, 1000);
-setTimeout(updateOpacity, 1000);
+
 
 function placeDot(x,y) {
     // console.log(x,y);
