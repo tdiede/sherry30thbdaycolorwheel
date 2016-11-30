@@ -16,7 +16,7 @@ $(document).ready(function() {
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
-    canvas.width = canvas.height = 0;
+    canvas.width = canvas.height = width;
 
 });
 
