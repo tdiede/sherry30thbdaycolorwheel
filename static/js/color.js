@@ -11,7 +11,7 @@ img.onload = addImageToCanvas;
 // img.src = 'static/img/poraschaudhary-photo-21.jpg';
 img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
 
-
+console.log(img.height, img.width);
 
 var width = $(window).width();
 canvas.width = width;
