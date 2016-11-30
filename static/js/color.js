@@ -85,7 +85,7 @@ moveDot(x,y);
 
 function changeColor(color) {
     $('#sample-box').css('background-color', 'rgb('+color+')');
-    $('#happy-birthday').css('color', 'rgb('+color+')');
+    $('h1').css('color', 'rgb('+color+')');
 }
 
 // var current;
