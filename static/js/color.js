@@ -2,16 +2,17 @@
 
 
 var canvas = document.getElementById('canvas-picker');
-var ctx = canvas.getContext('2d');
-
 canvas.width = canvas.height = 0;
 
 // create an image object and get it’s source
 var img = new Image();
 img.src = '/static/img/poraschaudhary-photo-21.jpg';
 
+var ctx;
+
 // copy the image to the canvas
 function addImageToCanvas() {
+    ctx = canvas.getContext('2d');
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
