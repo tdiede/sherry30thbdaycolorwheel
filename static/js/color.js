@@ -9,7 +9,7 @@ var img = new Image();
 var width;
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // set img source
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
-});
+// });
 
 
 $(window).bind("load", function() {
