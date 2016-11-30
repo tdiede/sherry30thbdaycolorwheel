@@ -8,7 +8,6 @@ var img = new Image();
 // set img source
 img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
-var width = $(document).width();
 
 
 $(document).ready(function() {
@@ -24,7 +23,7 @@ $(document).ready(function() {
 $(window).bind("load", function() {
 
 
-
+    var width = $(document).width();
 
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
