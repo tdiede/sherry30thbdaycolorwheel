@@ -12,6 +12,8 @@ img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 $(document).ready(function() {
 
+    var width = $(document).width();
+
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
@@ -22,8 +24,6 @@ $(document).ready(function() {
 
 $(window).bind("load", function() {
 
-
-    var width = $(document).width();
 
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
