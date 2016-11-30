@@ -9,7 +9,7 @@ var img = new Image();
 $(document).ready(function() {
 
     canvas = document.getElementById('canvas-picker');
-    canvas.width = canvas.height = 0;
+    canvas.width = $(document).width();
 
     ctx = canvas.getContext('2d');
 
