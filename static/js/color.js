@@ -162,6 +162,8 @@ function updateOpacity(e) {
     var opacity = $('#opacity-range').val();
     $('#sample-box').css('opacity', opacity/100);
     $('#opacity-range-label').html(opacity + '% opacity');
+
+    $('#happy-birthday').css('opacity', opacity/100);
 }
 
 
