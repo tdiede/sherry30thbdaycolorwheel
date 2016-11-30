@@ -10,6 +10,7 @@ var width;
 
 $(document).on('load', function() {
 
+    console.log('loaded');
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
 
