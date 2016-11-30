@@ -52,6 +52,11 @@ body {
     cursor: url('../img/eyedropper_flip.png') 25 25, auto;
 }
 
+#happy-birthday {
+    color: blue;
+}
+
+
 #sample-box {
     position: relative;
     margin: 0 auto;
