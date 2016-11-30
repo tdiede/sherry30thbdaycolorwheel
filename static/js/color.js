@@ -17,13 +17,12 @@ $(window).resize(function(){
     if ($(this).width() != width) {
         width = $(this).width();
         console.log(width);
+        resizeCanvas();
     }
 });
 
 
 function resizeCanvas() {
-    var width = $(document).width();
-    console.log(width);
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
 }
