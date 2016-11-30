@@ -3,10 +3,7 @@
 
 // set canvas and ctx
 var canvas = document.getElementById('canvas-picker');
-var ctx;
-canvas.onload = function() {
-    ctx = canvas.getContext('2d');
-};
+var ctx = canvas.getContext('2d');
 // create an image object
 var img = new Image();
 img.onload = addImageToCanvas;
