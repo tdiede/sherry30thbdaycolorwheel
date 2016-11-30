@@ -8,17 +8,12 @@ var img = new Image();
 
 var width;
 
-$(document).on('load', function() {
+
+$(document).ready(function() {
 
     console.log('loaded');
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
-
-});
-
-$(document).ready(function() {
-
-
 
     // width = $(document).width();
     // canvas.width = width;
