@@ -10,13 +10,13 @@ img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
     // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
 
-});
+// });
 
 
 $(window).bind("load", function() {
