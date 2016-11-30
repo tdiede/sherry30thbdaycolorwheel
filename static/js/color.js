@@ -11,9 +11,13 @@ var width;
 
 $(document).ready(function() {
 
+    // set canvas and ctx
     canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
+
+    // set img source
+    img.src = 'static/img/poraschaudhary-photo-21.jpg';
 });
 
 
@@ -23,8 +27,7 @@ $(window).bind("load", function() {
     // canvas.width = width;
     console.log(width);
 
-    // set img source
-    img.src = 'static/img/poraschaudhary-photo-21.jpg';
+
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
     updateOpacity();
