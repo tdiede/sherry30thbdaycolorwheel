@@ -23,16 +23,20 @@ $(document).ready(function() {
 
 $(window).bind("load", function() {
 
-    var width = $(document).width();
-
-    canvas.width = width;
-    canvas.height = (img.height/img.width) * width;
+    resizeCanvas();
 
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
     updateOpacity();
 });
 
+
+function resizeCanvas() {
+    var width = $(document).width();
+    console.log(width);
+    canvas.width = width;
+    canvas.height = (img.height/img.width) * width;
+}
 
 
 // copy the image to the canvas
