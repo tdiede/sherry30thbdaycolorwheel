@@ -1,7 +1,7 @@
 "use strict";
 
 
-var canvas = document.getElementById('canvas-picker');
+var canvas;
 var ctx;
 // create an image object
 var img = new Image();
@@ -13,14 +13,19 @@ var width = $(document).width();
 
 $(document).ready(function() {
 
-    // set canvas and ctx
-    ctx = canvas.getContext('2d');
-    canvas.width = canvas.height = 0;
+
 
 });
 
 
 $(window).bind("load", function() {
+
+
+    // set canvas and ctx
+    canvas = document.getElementById('canvas-picker');
+    ctx = canvas.getContext('2d');
+    canvas.width = canvas.height = 0;
+
     // add img to canvas and update opacity slider (default)
     addImageToCanvas();
     updateOpacity();
