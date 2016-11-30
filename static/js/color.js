@@ -1,7 +1,7 @@
 "use strict";
 
 
-var canvas;
+var canvas = document.getElementById('canvas-picker');
 var ctx;
 // create an image object
 var img = new Image();
@@ -14,7 +14,6 @@ var width = $(document).width();
 $(document).ready(function() {
 
     // set canvas and ctx
-    canvas = document.getElementById('canvas-picker');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.height = 0;
 
