@@ -5,7 +5,7 @@
 
 body {
   /* Location of the image */
-  background-image: url('../img/testing.png');  
+  /*background-image: url('../img/testing.png'); */
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;  
   /* Background image doesn't tile */
