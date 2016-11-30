@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>HAPPY BIRTHDAY, SXY!</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+    <link rel="stylesheet" href="../static/css/site.css" />
+
+    <script src='../static/js/color.js'></script>
+
+</head>
+
+<body>
+
+
+
+<canvas id="canvas-picker"></canvas>
+
+<div>
+
+<form action='/color_input' method='GET'>
+    RGB: <input id="rgb" type="text" placeholder='0-255, 0-255, 0-255' value='' data-rgb=''></input>
+    HEX: <input id="hex" type="text" placeholder='RRGGBB' value='' data-hex=''></input>
+</form>
+
+<div>
+    <h3>opacity slider</h3>
+    <label id="opacity-range-label" for="opacity-range"></label>
+    <input id="opacity-range" type="range" max='100' min='0' value='100' />
+    <div id='sample-box'></div>
+</div>
+
+</div>
+
+
+</body>
+</html>
