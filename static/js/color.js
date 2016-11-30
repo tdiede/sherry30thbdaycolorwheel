@@ -4,6 +4,7 @@
 // set canvas and ctx
 var canvas = document.getElementById('canvas-picker');
 var ctx = canvas.getContext('2d');
+canvas.width = canvas.height = 0;
 // create an image object
 var img = new Image();
 img.onload = addImageToCanvas;
