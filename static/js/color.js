@@ -3,7 +3,7 @@
 
 var canvas;
 var ctx;
-var img;
+var img = new Image();
 
 $(document).ready(function() {
 
@@ -11,7 +11,6 @@ $(document).ready(function() {
     canvas.width = canvas.height = 0;
 
     // create an image object and get it’s source
-    img = new Image();
     img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
     ctx = canvas.getContext('2d');
