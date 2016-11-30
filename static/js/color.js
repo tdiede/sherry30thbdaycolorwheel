@@ -6,6 +6,7 @@ var canvas = document.getElementById('canvas-picker');
 var ctx = canvas.getContext('2d');
 // create an image object
 var img = new Image();
+img.onload = setCanvas;
 img.onload = addImageToCanvas;
 // set img source
 // img.src = 'static/img/poraschaudhary-photo-21.jpg';
@@ -14,9 +15,6 @@ console.log(img.height+'x'+img.width);
 
 
 var width = $(window).width();
-canvas.width = width;
-canvas.height = (img.height/img.width) * width;
-console.log(width+'x'+canvas.height);
 $(window).resize(function(){
     if ($(this).width() != width) {
         width = $(this).width();
@@ -24,6 +22,14 @@ $(window).resize(function(){
         resizeCanvas(width);
     }
 });
+
+
+// set initial canvas dimensions
+function setCanvas(width) {
+    canvas.width = width;
+    canvas.height = (img.height/img.width) * width;
+    console.log(width+'x'+canvas.height);    
+}
 
 
 // resize canvas, if change detected on window.width
