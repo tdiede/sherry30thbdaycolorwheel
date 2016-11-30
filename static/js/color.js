@@ -4,7 +4,6 @@
 // set canvas and ctx
 var canvas = document.getElementById('canvas-picker');
 var ctx = canvas.getContext('2d');
-canvas.width = canvas.height = 1;
 // create an image object
 var img = new Image();
 img.onload = addImageToCanvas;
@@ -15,6 +14,8 @@ img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
 
 
 var width = $(window).width();
+canvas.width = width;
+console.log(width);
 $(window).resize(function(){
     if ($(this).width() != width) {
         width = $(this).width();
