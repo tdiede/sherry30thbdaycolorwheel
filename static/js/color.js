@@ -23,8 +23,8 @@ $(document).ready(function() {
 
 $(window).bind("load", function() {
 
-    canvas.width = width;
-    canvas.height = 900;
+    canvas.width = img.width;
+    canvas.height = img.height;
 
 
     // add img to canvas and update opacity slider (default)
