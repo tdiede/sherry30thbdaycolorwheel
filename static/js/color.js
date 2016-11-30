@@ -1,36 +1,20 @@
 "use strict";
 
+$(document).ready(function() {
 
+    // set canvas and ctx
+    var canvas = document.getElementById('canvas-picker');
+    var ctx = canvas.getContext('2d');
+    // create an image object
+    var img = new Image();
+    img.onload = addImageToCanvas;
+    // set img source
+    img.src = 'static/img/poraschaudhary-photo-21.jpg';
 
+    updateOpacity();
 
+});
 
-
-
-// set canvas and ctx
-var canvas = document.getElementById('canvas-picker');
-var ctx = canvas.getContext('2d');
-// create an image object
-var img = new Image();
-img.onload = addImageToCanvas;
-// set img source
-img.src = 'static/img/poraschaudhary-photo-21.jpg';
-
-
-
-
-// $(document).ready(function() {
-
-//     canvas.width = canvas.height = 0;
-
-// });
-
-
-// $(window).bind("load", function() {
-
-//     // add img to canvas and update opacity slider (default)
-//     addImageToCanvas();
-//     updateOpacity();
-// });
 
 
 function resizeCanvas() {
