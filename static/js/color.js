@@ -1,18 +1,22 @@
 "use strict";
 
 
-var canvas = document.getElementById('canvas-picker');
-// canvas.width = canvas.height = 0;
+$(document).ready(function() {
 
-// create an image object and get it’s source
-var img = new Image();
-img.src = '/static/img/poraschaudhary-photo-21.jpg';
+    var canvas = document.getElementById('canvas-picker');
+    canvas.width = canvas.height = 0;
 
-var ctx;
+    // create an image object and get it’s source
+    var img = new Image();
+    img.src = 'static/img/poraschaudhary-photo-21.jpg';
+
+    var ctx
+    ctx = canvas.getContext('2d');
+}
+
 
 // copy the image to the canvas
 function addImageToCanvas() {
-    ctx = canvas.getContext('2d');
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
