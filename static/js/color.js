@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     var ctx
     ctx = canvas.getContext('2d');
-}
+});
 
 
 // copy the image to the canvas
