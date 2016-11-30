@@ -1,8 +1,21 @@
 "use strict";
 
 
+// set canvas and ctx
+var canvas = document.getElementById('canvas-picker');
+var ctx = canvas.getContext('2d');
+// create an image object
+var img = new Image();
+img.onload = addImageToCanvas;
+// set img source
+// img.src = 'static/img/poraschaudhary-photo-21.jpg';
+img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
+console.log(img.height+'x'+img.width);
+
+
 var width = $(window).width();
-$(window).resize(function(){
+$(document).ready( setCanvas );
+$(window).resize(function() {
     if ($(this).width() != width) {
         width = $(this).width();
         console.log(width);
@@ -11,24 +24,8 @@ $(window).resize(function(){
 });
 
 
-
-// set canvas and ctx
-var canvas = document.getElementById('canvas-picker');
-var ctx = canvas.getContext('2d');
-// create an image object
-var img = new Image();
-img.onload = setCanvas;
-img.onload = addImageToCanvas;
-// set img source
-// img.src = 'static/img/poraschaudhary-photo-21.jpg';
-img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
-console.log(img.height+'x'+img.width);
-
-
-
 // set initial canvas dimensions
 function setCanvas(width) {
-    width = $(window).width();
     canvas.width = width;
     canvas.height = (img.height/img.width) * width;
     console.log(width+'x'+canvas.height);
