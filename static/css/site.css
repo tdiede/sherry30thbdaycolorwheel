@@ -1,5 +1,8 @@
 /* Style */
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
 body {
   /* Location of the image */
   background-image: url('../img/testing.png');  
@@ -53,6 +56,9 @@ body {
 }
 
 #happy-birthday {
+    font-family: Merriweather;
+    font-size: 48px;
+    font-weight: black;
     color: blue;
 }
 
