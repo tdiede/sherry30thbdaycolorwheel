@@ -1,0 +1,69 @@
+/* Style */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
+body {
+  background-color: #eeeeee;
+}
+
+#canvas-picker {
+    background-color: transparent;
+    z-index: 100;
+    cursor: url('../img/eyedropper_flip.png') 25 25, auto;
+    min-height: 500px;
+}
+
+#happy-birthday {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    padding: 0;
+}
+
+h1 {
+    font-family: Merriweather;
+    font-size: 48px;
+    font-weight: black;
+    color: white;
+    text-shadow: 3px 3px 1px transparent;
+    text-align: center;
+}
+
+#tool-kit {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+label {
+    display: inline;
+}
+
+#opacity-range {
+    display: inline;
+    width: 25%;
+    margin: 2px auto;
+    cursor: pointer;
+}
+
+#color-controls {
+    position: relative;
+    display: block;
+}
+
+#opacity-controls {
+    position: relative;
+    display: block;
+}
+
+#sample-box {
+    position: relative;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    /*background-color: white;*/
+    border: white 3px solid;
+}

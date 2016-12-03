@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>HAPPY 30th BIRTHDAY, SXY!</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+    <link rel="stylesheet" href="static/css/site.css" />
+
+    <!-- my favicon -->
+    <link rel="icon" href="static/img/cupcake.ico" />
+
+</head>
+
+<body>
+
+
+
+<canvas id="canvas-picker"></canvas>
+
+<div id="happy-birthday"><h1>happy 30th birthday, Sherry!</h1></div>
+
+
+
+<div id="tool-kit">
+
+<form id="color-controls" action='/color_input' method='GET'>
+    <label>RGB: </label><input id="rgb" type="text" placeholder='0-255, 0-255, 0-255' value='' data-rgb=''></input>
+    <label>HEX: </label><input id="hex" type="text" placeholder='RRGGBB' value='' data-hex=''></input>
+</form>
+<form id="opacity-controls" action='/opacity_input' method='GET'>
+    opacity: 
+    <label id="opacity-range-label" for="opacity-range"></label>
+    <input id="opacity-range" type="range" max='100' min='0' value='80'></input>
+</form>
+<div id='sample-box'></div>
+
+</div>
+
+<script src='static/js/color.js'></script>
+</body>
+</html>
