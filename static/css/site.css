@@ -4,35 +4,21 @@
 
 
 body {
-  /* Location of the image */
-  /*background-image: url('../img/testing.png'); */
-  /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;  
-  /* Background image doesn't tile */
-  background-repeat: no-repeat;
-    /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-  background-attachment: fixed;  
-  /* This is what makes the background image rescale based
-     on the container's size */
-  background-size: cover;  
-  /* Set a background color that will be displayed
-     while the background image is loading */
   background-color: #eeeeee;
 }
-
 
 #canvas-picker {
     background-color: transparent;
     z-index: 100;
     cursor: url('../img/eyedropper_flip.png') 25 25, auto;
+    min-height: 500px;
 }
 
 #happy-birthday {
     position: fixed;
     top: 30px;
     width: 100%;
-    padding: 20px;
+    padding: 0;
 }
 
 h1 {
@@ -46,23 +32,38 @@ h1 {
 
 #tool-kit {
     position: relative;
-    padding: 20px;
+    width: 100%;
     margin: 0 auto;
+    padding-left: 10px;
 }
 
-
-#sample-box {
-    position: relative;
-    margin: 0 auto;
-    height: 50px;
-    width: 100px;
-    background-color: orange;
-    opacity: 0.5;
-    border: white 3px solid;
+label {
+    display: inline;
 }
 
 #opacity-range {
-    width: 200px;
-    margin: 0 auto;
+    display: inline;
+    width: 25%;
+    margin: 2px auto;
     cursor: pointer;
+}
+
+#color-controls {
+    position: relative;
+    display: block;
+}
+
+#opacity-controls {
+    position: relative;
+    display: block;
+}
+
+#sample-box {
+    position: relative;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    /*background-color: white;*/
+    border: white 3px solid;
 }

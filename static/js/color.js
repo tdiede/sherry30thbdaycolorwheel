@@ -9,12 +9,17 @@ var img = new Image();
 img.onload = addImageToCanvas;
 // set img source
 // img.src = 'static/img/poraschaudhary-photo-21.jpg';
-img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
+// img.src = 'static/img/Dhuleti-Pictures-Photos-color-festival-india.jpg';
+img.src = 'static/img/koli_hand.jpg';
 console.log(img.height+'x'+img.width);
 
 
 var width = $(window).width();
 $(document).ready( setCanvas(width) );
+$(document).ready( function() {
+    var opacity = $('#opacity-range').val();
+    setOpacity(opacity);
+});
 $(window).resize(function() {
     if ($(this).width() != width) {
         width = $(this).width();
@@ -27,7 +32,7 @@ $(window).resize(function() {
 // set initial canvas dimensions
 function setCanvas(width) {
     canvas.width = width;
-    canvas.height = (img.height/img.width) * width;
+    canvas.height = 0.5 * width;
     console.log(width+'x'+canvas.height);
 }
 
@@ -68,8 +73,6 @@ function moveDot(x,y) {
     placeDot(x,y);
 }
 
-
-
 function calculateColor(e) {
 // getting user coordinates
 var x = event.pageX - this.offsetLeft;
@@ -95,9 +98,6 @@ function changeColor(color) {
     $('h1').css('color', 'rgb('+color+')');
     $('h1').css('text-shadow', '3px 3px 1px white');
 }
-
-// var current;
-// current = color;
 
 function updateRGBValue(result) {
     var color = $('#rgb').val();
@@ -125,7 +125,6 @@ function updateHEXValue(result) {
     $('#hex').val(hexText);
 }
 
-
 function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
 function toHex(n) {
 n = parseInt(n,10);
@@ -148,6 +147,16 @@ function hexToRGB(hex) {
     return R + "," + G + "," + B;
 }
 
+function setOpacity(opacity) {
+    $('#sample-box').css('opacity', opacity/100);
+    $('#opacity-range-label').html(opacity + '%');
+    $('#happy-birthday').css('opacity', opacity/100);
+}
+
+function updateOpacity(e) {
+    var opacity = $('#opacity-range').val();
+    setOpacity(opacity);
+}
 
 $(document).ready(function() {
     $('#opacity-range').change(updateOpacity);
@@ -158,26 +167,3 @@ $(document).ready(function() {
     $('#rgb').change(updateRGBValue);
 
 });
-
-
-function updateOpacity(e) {
-    var opacity = $('#opacity-range').val();
-    $('#sample-box').css('opacity', opacity/100);
-    $('#opacity-range-label').html(opacity + '% opacity');
-
-    $('#happy-birthday').css('opacity', opacity/100);
-}
-
-
-
-
-
-
-
-// ... amy winehouse
-// listen to your heart... roxette
-// it must have been love... roxette
-// take on me... a-ha
-// can't fight this feeling anymore... reo speedwagon
-// winner takes it all... abba
-// she's got a way... billy joel
